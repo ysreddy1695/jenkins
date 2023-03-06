@@ -9,9 +9,10 @@ pipeline {
                 // Run a Unix 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
-            }
-
-            
+            }   
+        }
+        stage('Maven Build') {
+            sh "mvn clean package"
         }
     }
 }
